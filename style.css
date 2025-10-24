@@ -22,9 +22,10 @@ body {
 
 /* Pixel-style card */
 .pixel-card {
-    width: 350px;
+    position: relative;
+    width: 320px;
     height: 350px;
-    background: #1b1b1b;
+    background: #00ff001a;
     border: 4px solid #00ff00;
     position: relative;
     transition: transform 0.3s ease;
