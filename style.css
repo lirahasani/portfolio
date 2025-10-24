@@ -38,7 +38,22 @@ body {
     image-rendering: pixelated;
 }
 
-.pixel-card:hover {
+.window-horizontal {
+    background: #00ff00;
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    top: 50%;
+}
+
+.window-vertical {
+    width: 10px;
+    display: block;
+    height: 100%;
+    background: #00ff00;
+    margin: auto;
+}
+.me-card:hover {
     transform: rotateY(180deg) rotateX(10deg);
 }
 
@@ -62,7 +77,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.pixel-card:hover::before {
+.me-card:hover::before {
     opacity: 1;
 }
 
@@ -83,7 +98,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.pixel-card:hover::after {
+.me-card:hover::after {
     opacity: 1;
 }
 
@@ -118,15 +133,14 @@ body {
     padding: 20px;
     box-sizing: border-box;
     image-rendering: pixelated;
-    transform: rotateY(180deg); /* flips text back */
 }
 
-.pixel-card:hover .info-overlay {
+.me-card:hover .info-overlay {
     opacity: 1;
 }
 
 /* Headings */
-.info-overlay h3,
+h1,
 .content-text h4 {
     font-size: 18px;
     margin-bottom: 12px;
@@ -264,3 +278,74 @@ body {
     margin-bottom: 0;
 }
 
+/* Remove Swiper's default arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-navigation-icon {
+    display: none;
+}
+
+/* Common styles for both arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #001a00;
+  border: 3px solid #00ff00;
+  box-shadow:
+    0 0 0 2px #1a1a1a,
+    0 0 8px #00ff00,
+    inset 0 0 8px #00ff00;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+}
+
+/* Hover glow */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 15px #00ff00,
+    0 0 25px #00ff00 inset;
+}
+
+/* Pixel arrow shapes */
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Right arrow (next) */
+.swiper-button-next::before {
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent #00ff00;
+  filter: drop-shadow(0 0 3px #00ff00);
+}
+
+/* Left arrow (prev) */
+.swiper-button-prev::before {
+  border-width: 6px 10px 6px 0;
+  border-color: transparent #00ff00 transparent transparent;
+  filter: drop-shadow(0 0 3px #00ff00);
+}
+
+/* Adjust placement */
+.swiper-button-prev {
+  left: 15px;
+}
+
+.swiper-button-next {
+  right: 15px;
+}
