@@ -1,143 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lira Hasani</title>
+        <meta name="description" content="Lira Hasani – Full-stack web developer portfolio showcasing projects in PHP, Laravel, WordPress, JavaScript, and modern web technologies.">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="icon" href="/favicon.webp" type="image/webp">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 style="position: absolute;
+            top: 12%;
+            font-size: 32px;
+            color: #00ff00;">LIRA HASANI</h1>
+        </header>
+        <main class="container swiper" style="display:flex; gap:36px">
+            <div class="swiper-wrapper" style="height: 400px;">
+                <div class="swiper-slide pixel-card">
+                    <span class="line top"></span>
+                    <span class="line bottom"></span>
+                    <span class="line left"></span>
+                    <span class="line right"></span>
+                </div>
+                <div class="swiper-slide pixel-card me-card">
+                    <model-viewer src="./me.glb" alt="My 3D Avatar" auto-rotate camera-controls ar style="width: 500px;
+                        height: 1000px;
+                        position: absolute;
+                        top: 0rem;
+                        left: -6rem;
+                    ">
+                    </model-viewer>
+                    <div class="info-overlay">
+                        <div class="main-content">
+                            <div class="links">
+                                <a href="https://www.linkedin.com/in/lirahasani" target="_blank" class="link">LINKEDIN</a>
+                                <span class="link" onclick="showContent('projects')">PROJECTS</span>
+                                <span class="link" onclick="showContent('skills')">SKILLS</span>
+                                <a href="mailto:your@email.com" class="link hire-me">HIRE ME</a>
+                            </div>
+                        </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lira Hasani</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="icon" href="/favicon.webp" type="image/webp">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-</head>
-
-<body>
-    <h1 style="position: absolute;
-    top: 12%;
-    font-size: 32px;
-    color: #00ff00;">LIRA HASANI</h1>
-    <div class="container swiper" style="display:flex; gap:36px">
-        <div class="swiper-wrapper" style="height: 400px;">
-            <div class="swiper-slide pixel-card">
-                <span class="line top"></span>
-                <span class="line bottom"></span>
-                <span class="line left"></span>
-                <span class="line right"></span>
-            </div>
-            <div class="swiper-slide pixel-card me-card">
-                <model-viewer src="./me.glb" alt="My 3D Avatar" auto-rotate camera-controls ar style="width: 500px;
-                    height: 1000px;
-                    position: absolute;
-                    top: 0rem;
-                    left: -6rem;
-                ">
-                </model-viewer>
-                <div class="info-overlay">
-                    <div class="main-content">
-                        <div class="links">
-                            <a href="https://www.linkedin.com/in/lirahasani" target="_blank" class="link">LINKEDIN</a>
-                            <a href="#" class="link" onclick="showContent('projects')">PROJECTS</a>
-                            <a href="#" class="link" onclick="showContent('skills')">SKILLS</a>
-                            <a href="mailto:your@email.com" class="link hire-me">HIRE ME</a>
+                        <div class="content-display" id="content-display" style="display: none;">
+                            <button class="back-btn" onclick="showMain()">← BACK</button>
+                            <div class="content-text" id="content-text"></div>
                         </div>
                     </div>
-
-                    <div class="content-display" id="content-display" style="display: none;">
-                        <button class="back-btn" onclick="showMain()">← BACK</button>
-                        <div class="content-text" id="content-text"></div>
+                    <!-- My Favorite Song Right Now Section -->
+                    <div class="favorite-song">
+                        <h3 class="speech-bubble">Heeya! 👋</h3>
+                        <iframe
+                            src="https://open.spotify.com/embed/track/3e0FzZjTXOUtiJGSClOBrI?utm_source=generator&theme=0"
+                            frameborder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            style="border-radius: 12px; margin-top: 8px;position: absolute;
+                            bottom: 0;
+                            z-index: 1;
+                            left: 50%;
+                            transform: translate(-50%);
+                            width:90%;height: 24%;" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
-                <!-- My Favorite Song Right Now Section -->
-                <div class="favorite-song">
-                    <h3 class="speech-bubble">Heeya! 👋</h3>
-                    <iframe
-                        src="https://open.spotify.com/embed/track/3e0FzZjTXOUtiJGSClOBrI?utm_source=generator&theme=0"
-                        frameborder="0"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        style="border-radius: 12px; margin-top: 8px;position: absolute;
-                        bottom: 0;
-                        z-index: 1;
-                        left: 50%;
-                        transform: translate(-50%);
-                        width:90%;height: 24%;" loading="lazy">
-                    </iframe>
+                <div class="swiper-slide pixel-card">
+                    <span class="line top"></span>
+                    <span class="line bottom"></span>
+                    <span class="line left"></span>
+                    <span class="line right"></span>
                 </div>
             </div>
-            <div class="swiper-slide pixel-card">
-                <span class="line top"></span>
-                <span class="line bottom"></span>
-                <span class="line left"></span>
-                <span class="line right"></span>
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </main>
+        <script>
+            function showContent(type) {
+                const mainContent = document.querySelector('.main-content');
+                const contentDisplay = document.getElementById('content-display');
+                const contentText = document.getElementById('content-text');
 
-    <script>
-        function showContent(type) {
-            const mainContent = document.querySelector('.main-content');
-            const contentDisplay = document.getElementById('content-display');
-            const contentText = document.getElementById('content-text');
+                if (type === 'projects') {
+                    contentText.innerHTML = `
+                        <h4>PROJECTS</h4>
+                        <p>🚧 COMING SOON 🚧</p>
+                        <p>Exciting projects are in development!</p>
+                        <p>Check back later for updates.</p>
+                    `;
+                } else if (type === 'skills') {
+                    contentText.innerHTML = `
+                        <h4>SKILLS</h4>
+                        <p>🐘 PHP</p>
+                        <p>⚙️ Laravel</p>
+                        <p>🌐 WordPress</p>
+                        <p>💻 JavaScript</p>
+                        <p>🎨 Tailwind</p>
+                        <p>🧱 CSS / HTML</p>
+                    `;
+                }
 
-            if (type === 'projects') {
-                contentText.innerHTML = `
-                    <h4>PROJECTS</h4>
-                    <p>🚧 COMING SOON 🚧</p>
-                    <p>Exciting projects are in development!</p>
-                    <p>Check back later for updates.</p>
-                `;
-            } else if (type === 'skills') {
-                contentText.innerHTML = `
-                    <h4>SKILLS</h4>
-                    <p>🐘 PHP</p>
-                    <p>⚙️ Laravel</p>
-                    <p>🌐 WordPress</p>
-                    <p>💻 JavaScript</p>
-                    <p>🎨 Tailwind</p>
-                    <p>🧱 CSS / HTML</p>
-                `;
+                mainContent.style.display = 'none';
+                contentDisplay.style.display = 'block';
             }
 
-            mainContent.style.display = 'none';
-            contentDisplay.style.display = 'block';
-        }
+            function showMain() {
+                const mainContent = document.querySelector('.main-content');
+                const contentDisplay = document.getElementById('content-display');
 
-        function showMain() {
-            const mainContent = document.querySelector('.main-content');
-            const contentDisplay = document.getElementById('content-display');
-
-            mainContent.style.display = 'block';
-            contentDisplay.style.display = 'none';
-        }
-
-        new Swiper('.swiper', {
-            direction: 'horizontal',
-            loop: false,
-            spaceBetween: '24px',
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3,
-                    initialSlide: 0,
-                },
-                768: {
-                    slidesPerView: 2,
-                    initialSlide: 0,
-                },
-                0: {
-                    slidesPerView: 1,
-                    initialSlide: 1,
-                },
+                mainContent.style.display = 'block';
+                contentDisplay.style.display = 'none';
             }
-        });
-    </script>
-</body>
 
+            new Swiper('.swiper', {
+                direction: 'horizontal',
+                loop: false,
+                spaceBetween: '24px',
+
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        initialSlide: 0,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        initialSlide: 0,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                        initialSlide: 1,
+                    },
+                }
+            });
+        </script>
+    </body>
 </html>
